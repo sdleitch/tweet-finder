@@ -1,8 +1,17 @@
-require 'punkt-segmenter'
+require "punkt-segmenter"
+require "nokogiri"
+require "open-uri"
 
-#Drop in a string
-puts "Gimme me some text:"
-text = gets.chomp
+#Drop in a URL
+puts "Gimme a URL:"
+url = gets.chomp
+
+#Parse raw HTML from URL, save it to doc.
+doc = Nokogiri::HTML(open(url))
+#Find 'p' tags and save their content to text
+text = doc.css('p').text
+
+# puts text
 
 # Set tokenizer with Punkt
 tokenizer = Punkt::SentenceTokenizer.new(text)
