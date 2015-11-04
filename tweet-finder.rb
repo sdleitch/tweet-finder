@@ -21,7 +21,7 @@ sentences = tokenizer.sentences_from_text(text, :output => :sentences_text)
 
 tweets = []
 sentences.each do |sentence|
-  if sentence.length <= 140
+  if sentence.length <= 117 #140 - 23 for Twitter URL shortening and an extra space.
     tweets << sentence
   end
 end
