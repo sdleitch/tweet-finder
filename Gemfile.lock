@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    punkt-segmenter (0.9.1)
+      unicode_utils (>= 1.0.0)
+    unicode_utils (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  punkt-segmenter
